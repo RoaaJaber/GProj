@@ -5,7 +5,7 @@ function LoginPage(props) {
     return (
         <View style ={styles.container}>
           <View style = {styles.viewStyle}>
-              <Text >logo</Text>
+              <Text style ={styles.text} >logo</Text>
               </View> 
            <View style = {styles.viewStyle}>
            <TextInput style = {styles.inputStyle} 
@@ -21,7 +21,7 @@ function LoginPage(props) {
                </View>   
           <View style = { styles.viewStyle }>
               <Text style = {styles.text}>Don't have an account yet ? </Text>
-              <Text style = {styles.text} >Signup</Text>
+              <Text style = {styles.textSign} >Signup</Text>
                </View>    
         </View>
     );
@@ -67,6 +67,12 @@ const styles = StyleSheet.create({
     },
     text :{
         top : 70,  
+    },
+    textSign :{
+        top :70,
+        fontSize : 16 ,
+        color : '#AF6588' ,
+        fontWeight : '500'
     }
 })
 export default LoginPage;

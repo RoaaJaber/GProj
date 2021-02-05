@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image,Text, View ,StyleSheet, StatusBar, TextInput, TouchableOpacity} from 'react-native';
 import colors from './colors';
+import Icon from 'react-native-vector-icons/Ionicons';
 function LoginPage(props) {
     return (
         <View style ={styles.container}>
@@ -8,12 +9,14 @@ function LoginPage(props) {
               <Text style ={styles.text} >logo</Text>
               </View> 
            <View style = {styles.viewStyle}>
+            <Icon name ={'ios-person-outline'} size = {28} color = {'rgba(255,255,255,0.7)'} style = {styles.userIcon}/>
            <TextInput style = {styles.inputStyle} 
            underlineColorAndroid='rgba(0,0,0,0)' 
            placeholder = "Username"/>
           
            <TextInput style = {styles.inputStyle} 
            underlineColorAndroid='rgba(0,0,0,0)' 
+           secureTextEntry ={true}
            placeholder = "Password"/>
            <TouchableOpacity style = {styles.button}>
                <Text style = {styles.buttonText}>Login</Text>
@@ -40,13 +43,19 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
 
     },
+    userIcon :{
+        position : 'absolute',
+        top :175 ,
+        left : 50
+        
+    },
     inputStyle :{
      width : 300 ,
      height : 50 ,
      top : 70,
      backgroundColor : 'rgba(255,255,255,0.3)', 
      borderRadius : 25 ,
-     paddingHorizontal :15,
+     paddingHorizontal :25,
      fontSize : 16 ,
      marginVertical : 10
     },
